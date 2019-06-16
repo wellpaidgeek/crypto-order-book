@@ -15,7 +15,7 @@ export const withWebSocket = (url, Component) =>
       this.socket.onopen = () => this.setState({ socket: this.socket });
     }
 
-    componentWillUnmout () {
+    componentWillUnmount () {
       this.socket.close();
     }
 
